@@ -7,3 +7,27 @@ const mongoose = require('mongoose')
     }).catch((erro)=>{
         console.log(`Houve um erro ao se conectar ao MongoDB: ${erro}`)
     })
+
+// Model - Usuários
+
+const UsuariosSchema = mongoose.Schema({
+    nome: {
+        type: String,
+        require: true
+    },
+    sobrenome: {
+        type: String,
+        require: true
+    },
+    email: {
+        type: String,
+        require: true
+    },
+    idade: {
+        type: Number,
+        require: true
+    },
+    pais: {
+        type: String
+    }
+})
