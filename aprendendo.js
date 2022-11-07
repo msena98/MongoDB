@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
         console.log(`Houve um erro ao se conectar ao MongoDB: ${erro}`)
     })
 
-// Model - Usuários
+// Definindo Model - Usuários
 
 const UsuarioSchema = mongoose.Schema({
     nome: {
@@ -31,5 +31,7 @@ const UsuarioSchema = mongoose.Schema({
         type: String
     }
 })
+
+// Definindo Collection
 
 mongoose.model('usuarios', UsuarioSchema)
