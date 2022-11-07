@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
 
 // Model - Usuários
 
-const UsuariosSchema = mongoose.Schema({
+const UsuarioSchema = mongoose.Schema({
     nome: {
         type: String,
         require: true
@@ -31,3 +31,5 @@ const UsuariosSchema = mongoose.Schema({
         type: String
     }
 })
+
+mongoose.model('usuarios', UsuarioSchema)
