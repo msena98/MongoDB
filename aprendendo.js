@@ -36,9 +36,9 @@ const mongoose = require('mongoose')
 
     mongoose.model('usuarios', UsuarioSchema)
 
-    const Matheus = mongoose.model('usuarios');
+    const Usuario = mongoose.model('usuarios');
 
-    new Matheus({
+    new Usuario({
         nome: 'Matheus',
         sobrenome: 'Sena',
         email: 'dev.matheussena@gmail.com',
