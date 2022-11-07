@@ -36,7 +36,9 @@ const mongoose = require('mongoose')
 
     mongoose.model('usuarios', UsuarioSchema)
 
-    new UsuarioSchema({
+    const Matheus = mongoose.model('usuarios');
+
+    new Matheus({
         nome: 'Matheus',
         sobrenome: 'Sena',
         email: 'dev.matheussena@gmail.com',
@@ -44,6 +46,6 @@ const mongoose = require('mongoose')
         pais: 'Brasil'
     }).save().then(() => {
         console.log("Usuário criado com sucesso!");
-    }).catch((erro) => {
-        console.log(`Houve um erro ao registrar o usuário: ${erro}`);
+    }).catch((err) => {
+        console.log(`Houve um erro ao registrar o usuário: ${err}`);
     })
